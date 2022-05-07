@@ -2,7 +2,7 @@ package it.develhope.nicola.newex2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Sala {
+public class Cinema {
     enum Posto {
         LIBERO,
         OCCUPATO
@@ -10,7 +10,7 @@ public class Sala {
     private final Posto[] seat;
     private final Scanner input;
 
-    public Sala(){
+    public Cinema(){
         seat = new Posto[10];
         for(int i=0; i<10; i++) {
             seat[i] = Posto.LIBERO;
