@@ -16,9 +16,6 @@ public class Utente {
         this.surname = surname;
     }
 
-    public void setAll(){
-    }
-
     @Override
     public String toString() {
         return "Utente{" +
