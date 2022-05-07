@@ -3,17 +3,13 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Cinema {
-    enum Posto {
-        LIBERO,
-        OCCUPATO
-    }
-    private final Posto[] seat;
+    private final boolean[] seat;
     private final Scanner input;
 
     public Cinema(){
-        seat = new Posto[10];
+        seat = new boolean[10];
         for(int i=0; i<10; i++) {
-            seat[i] = Posto.LIBERO;
+            seat[i] = true;
         }
         input = new Scanner(System.in);
     }
@@ -29,7 +25,7 @@ public class Cinema {
     private void seeDisp(){
         int j=0;
         for(int i=0; i<10; i++){
-            if(seat[i].name().equals("LIBERO")){
+            if(seat[i]){
                 j++;
             }
         }
@@ -39,9 +35,9 @@ public class Cinema {
     private void takePosto(){
         boolean check = false;
         for(int i=0; i<10; i++){
-            if(seat[i].name().equals("LIBERO")){
+            if(seat[i]){
                 check = true;
-                seat[i] = Posto.OCCUPATO;
+                seat[i] = false;
                 i=10;
             }
         }
@@ -53,9 +49,9 @@ public class Cinema {
     private void delPosto(){
         boolean check = false;
         for(int i=9; i>-1; i--){
-            if(seat[i].name().equals("OCCUPATO")){
+            if(!seat[i]){
                 check = true;
-                seat[i] = Posto.LIBERO;
+                seat[i] = true;
                 i=0;
             }
         }
