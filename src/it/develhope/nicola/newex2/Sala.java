@@ -2,7 +2,7 @@ package it.develhope.nicola.newex2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class EventManager {
+public class Sala {
     enum Posto {
         LIBERO,
         OCCUPATO
@@ -10,7 +10,7 @@ public class EventManager {
     private final Posto[] seat;
     private final Scanner input;
 
-    public EventManager(){
+    public Sala(){
         seat = new Posto[10];
         for(int i=0; i<10; i++) {
             seat[i] = Posto.LIBERO;

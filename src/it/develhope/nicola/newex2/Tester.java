@@ -14,7 +14,7 @@ public class Tester {
         managerList.add(5, new Manager("servio", "tullio"));
         managerList.add(6, new Manager("tarquinio", "il superbo"));
         Collections.shuffle(managerList);
-        CineManager cine = new CineManager();
+        MultiSala cine = new MultiSala();
         cine.addManager(managerList);
         cine.menu();
     }

@@ -1,11 +1,11 @@
 package it.develhope.nicola.newex2;
 import java.util.*;
 
-public class CineManager {
-    private final Map<Manager, EventManager> cine;
+public class MultiSala {
+    private final Map<Manager, Sala> cine;
     private final Scanner input;
 
-    public CineManager() {
+    public MultiSala() {
         this.cine = new HashMap<>();
         input = new Scanner(System.in);
     }
@@ -41,14 +41,14 @@ public class CineManager {
         if(checkManager(x)){
             System.out.println("Manager già esistente!");
         } else {
-            EventManager y = new EventManager();
+            Sala y = new Sala();
             cine.put(x, y);
         }
     }
 
     public void addManager(List<Manager> x){
         for(Manager y : x){
-            EventManager z = new EventManager();
+            Sala z = new Sala();
             cine.put(y,z);
         }
     }
