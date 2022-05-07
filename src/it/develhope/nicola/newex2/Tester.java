@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Tester {
     public static void main(String[] args){
+        /*
         List<Manager> managerList = new ArrayList<>();
         managerList.add(0, new Manager("romolo", "lupo"));
         managerList.add(1, new Manager("numa", "pompilio"));
@@ -16,6 +17,8 @@ public class Tester {
         Collections.shuffle(managerList);
         MultiCinema cine = new MultiCinema();
         cine.addManager(managerList);
-        cine.menu();
+        cine.menu();*/
+        Cinema x = new Cinema();
+        x.menu();
     }
 }
