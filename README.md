@@ -19,7 +19,7 @@ Obiettivo: gestire il multisala, sapendo che ogni singola sala è associata ad u
 #### postesame.rar
 Archivio delle versioni rar
 * 5.7.22.1v -> creazione archivio
-* 5.7.22.2v
+* 5.7.22.2v -> aggiornamento codice
   * newex2 -> aggiunto nominativo nella prenotazione
 * 5.8.22.1v -> aggiunta documentazione javadoc (newex2Doc)
   * newex2 -> aggiunti commenti javadoc
