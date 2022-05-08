@@ -18,7 +18,7 @@ public class Cinema {
     private final Scanner input;
 
     /**
-     * Costruttore per inizializzare le variabili
+     * Costruttore per inizializzare gli attributi
      * seat: ogni posto è libero
      * user: ogni utente è vuoto
      */

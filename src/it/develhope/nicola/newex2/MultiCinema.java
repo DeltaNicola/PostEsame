@@ -1,15 +1,31 @@
 package it.develhope.nicola.newex2;
 import java.util.*;
 
+/**
+ * classe che gestisce un multisala
+ * @author nicolameloni
+ */
 public class MultiCinema {
+
+    /**
+     * attributi:
+     * Map<Manager, Cinema> cine: assegna ad un Manager un Cinema
+     */
     private final Map<Manager, Cinema> cine;
     private final Scanner input;
 
+    /**
+     * Costruttore per inizializzare gli attributi
+     * cine è vuoto
+     */
     public MultiCinema() {
         this.cine = new HashMap<>();
         input = new Scanner(System.in);
     }
 
+    /**
+     * visualizza ogni comando possibile nel menù
+     */
     private void seeOpt(){
         System.out.println("Inserire il comando:");
         System.out.println("1: Inserire Manager");
@@ -18,6 +34,10 @@ public class MultiCinema {
         System.out.println("4: Chiudere il programma");
     }
 
+    /**
+     * crea un Manager tramite input
+     * @return inizializzazione del Manager
+     */
     private Manager createManager(){
         input.nextLine();
         System.out.println("Inserire nome:");
@@ -27,6 +47,11 @@ public class MultiCinema {
         return new Manager(nomeLog, cognomeLog);
     }
 
+    /**
+     * Controlla l'esistenza di un Manager
+     * @param x Manager da cercare nella Map cine
+     * @return true se Manager esiste, false se non esiste
+     */
     private boolean checkManager(Manager x){
         for(Manager y : cine.keySet()){
             if(y.toString().equalsIgnoreCase(x.toString())){
@@ -36,6 +61,10 @@ public class MultiCinema {
         return false;
     }
 
+    /**
+     * Aggiunge un Manager alla Map cine e gli assegna un Cinema
+     * controllo dell'esistenza precedente del Manager
+     */
     private void addManager(){
         Manager x = createManager();
         if(checkManager(x)){
@@ -53,6 +82,10 @@ public class MultiCinema {
         }
     }
 
+    /**
+     * login: accedere ad un Cinema attraverso key Manager
+     * controllo dell'esistenza precedenza del Manager
+     */
     private void login(){
         Manager log = createManager();
         if(checkManager(log)){
@@ -62,12 +95,25 @@ public class MultiCinema {
         }
     }
 
+    /**
+     * Stampa a schermo la lista dei Manager
+     */
     private void listaManager(){
         for(Manager x : cine.keySet()){
             System.out.println(x.toString());
         }
     }
 
+    /**
+     * menù di interazione in base all'input
+     * controllo dell'input e chiamata della funzione prescelta
+     * @throws InputMismatchException se input non è numerico
+     * 1 -> aggiunge un Manager
+     * 2 -> effettua il login
+     * 3 -> stampa lista Manager
+     * 4 -> chiude il programma
+     * 0, 5-9 -> non ha comandi stabiliti
+     */
     public void menu(){
         boolean loop = false;
         do{
