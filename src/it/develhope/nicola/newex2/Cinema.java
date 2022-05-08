@@ -2,11 +2,25 @@ package it.develhope.nicola.newex2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * classe che gestisce un'unica sala del cinema
+ * @author nicolameloni
+ */
 public class Cinema {
+
+    /**
+     seat[]: nota se il posto è libero od occupato
+     user[]: assegna un nominativo al posto occupato
+     */
     private final boolean[] seat;
     private final Utente[] user;
     private final Scanner input;
 
+    /**
+     * Costruttore per inizializzare le variabili
+     * seat: ogni posto è libero
+     * user: ogni utente è vuoto
+     */
     public Cinema(){
         seat = new boolean[10];
         user = new Utente[10];
@@ -17,6 +31,9 @@ public class Cinema {
         input = new Scanner(System.in);
     }
 
+    /**
+     * visualizza ogni comando possibile nel menù
+     */
     private void seeOpt(){
         System.out.println("Inserire il comando desiderato:");
         System.out.println("1: Visualizzare i posti disponibili");
@@ -24,7 +41,11 @@ public class Cinema {
         System.out.println("3: Cancellare la prenotazione");
         System.out.println("4: Uscire dal programma");
     }
-    
+
+    /**
+     * visualizza i posti diponibili
+     * se seat[index] == falso -> non è disponibile
+     */
     private void seeDisp(){
         int j=0;
         for(int i=0; i<10; i++){
@@ -37,7 +58,14 @@ public class Cinema {
         System.out.println("Posti disponibili: "+j);
     }
 
-    private Utente setUser(boolean x, int i){
+    /**
+     * assegna un utente al posto in base al booleano di controllo
+     * l'utente ha nome e cognome se il posto deve essere occupato
+     * l'utente ha nome e cognomi vuoti se il posto deve essere liberato
+     * @param x booleano di controllo
+     * @return utente completo o vuoto
+     */
+    private Utente setUser(boolean x){
         if(!x){
             System.out.println("Inserire nome:");
             input.nextLine();
@@ -50,13 +78,17 @@ public class Cinema {
         }
     }
 
+    /**
+     * prenotazione del posto
+     * controllo della disponibilità dei posti
+     */
     private void takePosto(){
         boolean check = false;
         for(int i=0; i<10; i++){
             if(seat[i]){
                 check = true;
                 seat[i] = false;
-                user[i] = setUser(seat[i], i);
+                user[i] = setUser(seat[i]);
                 i=10;
             }
         }
@@ -65,13 +97,17 @@ public class Cinema {
         }
     }
 
+    /**
+     * cancellazione della prenotazione
+     * controllo dell'esistenza di precedenti prenotazioni
+     */
     private void delPosto(){
         boolean check = false;
         for(int i=9; i>-1; i--){
             if(!seat[i]){
                 check = true;
                 seat[i] = true;
-                user[i] = setUser(seat[i], i);
+                user[i] = setUser(seat[i]);
                 i=0;
             }
         }
@@ -80,6 +116,16 @@ public class Cinema {
         }
     }
 
+    /**
+     * menù di interazione in base all'input
+     * controllo dell'input e chiamata della funzione prescelta
+     * @throws InputMismatchException se input non è numerico
+     * 1 -> vede la disponibilità dei posti
+     * 2 -> prenota un posto
+     * 3 -> cancella la prenotazione
+     * 4 -> chiude il programma
+     * 0, 5-9 -> non ha comandi stabiliti
+     */
     public void menu(){
         boolean loop = false;
         do{
