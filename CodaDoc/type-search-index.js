@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"it.develhope.nicola.Coda","l":"Business"},{"p":"it.develhope.nicola.Coda","l":"Coda"},{"p":"it.develhope.nicola.Coda","l":"Menu"},{"p":"it.develhope.nicola.Coda","l":"Persona"},{"p":"it.develhope.nicola.Coda","l":"Privato"}];updateSearchResults();
