@@ -4,13 +4,13 @@
 
 ***
 
-#### newex
+#### Coda
 Esercizio in cui si simula una coda con due tipi di utenti  
 Obiettivo: gestire la coda e capire quale tipo di utente si tratta
 
 ***
 
-#### newex2
+#### MultiCinema
 Esercizio in cui si simula un cinema multisala  
 Obiettivo: gestire il multisala, sapendo che ogni singola sala è associata ad un particolare Manager
 
@@ -27,3 +27,5 @@ Archivio delle versioni rar
   * Coda -> newex1
   * MultiCinema -> newex2
   * MulticinemaDoc -> newex2Doc
+* 5.8.22.3v -> aggiunta documentazione Javadoc (CodaDoc)
+  * Coda -> aggiunti commenti javadoc
