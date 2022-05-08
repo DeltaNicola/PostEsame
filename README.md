@@ -23,3 +23,7 @@ Archivio delle versioni rar
   * newex2 -> aggiunto nominativo nella prenotazione
 * 5.8.22.1v -> aggiunta documentazione javadoc (newex2Doc)
   * newex2 -> aggiunti commenti javadoc
+* 5.8.22.2v -> refactoring dei nomi
+  * Coda -> newex1
+  * MultiCinema -> newex2
+  * MulticinemaDoc -> newex2Doc
