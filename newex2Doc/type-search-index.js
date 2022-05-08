@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"it.develhope.nicola.newex2","l":"Cinema"},{"p":"it.develhope.nicola.newex2","l":"Manager"},{"p":"it.develhope.nicola.newex2","l":"MultiCinema"},{"p":"it.develhope.nicola.newex2","l":"Tester"},{"p":"it.develhope.nicola.newex2","l":"Utente"}];updateSearchResults();

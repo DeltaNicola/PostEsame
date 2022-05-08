@@ -8,14 +8,13 @@ import java.util.*;
 public class MultiCinema {
 
     /**
-     * attributi:
-     * Map<Manager, Cinema> cine: assegna ad un Manager un Cinema
+     * cine: assegna ad un Manager un Cinema
      */
     private final Map<Manager, Cinema> cine;
     private final Scanner input;
 
     /**
-     * Costruttore per inizializzare gli attributi
+     * Costruttore per inizializzare gli attributi<br>
      * cine è vuoto
      */
     public MultiCinema() {
@@ -35,7 +34,7 @@ public class MultiCinema {
     }
 
     /**
-     * crea un Manager tramite input
+     * crea un Manager tramite input<br>
      * @return inizializzazione del Manager
      */
     private Manager createManager(){
@@ -62,7 +61,7 @@ public class MultiCinema {
     }
 
     /**
-     * Aggiunge un Manager alla Map cine e gli assegna un Cinema
+     * Aggiunge un Manager alla Map cine e gli assegna un Cinema<br>
      * controllo dell'esistenza precedente del Manager
      */
     private void addManager(){
@@ -83,7 +82,7 @@ public class MultiCinema {
     }
 
     /**
-     * login: accedere ad un Cinema attraverso key Manager
+     * login: accedere ad un Cinema attraverso key Manager<br>
      * controllo dell'esistenza precedenza del Manager
      */
     private void login(){
@@ -105,14 +104,14 @@ public class MultiCinema {
     }
 
     /**
-     * menù di interazione in base all'input
-     * controllo dell'input e chiamata della funzione prescelta
+     * menù di interazione in base all'input <br>
+     * controllo dell'input e chiamata della funzione prescelta<br>
+     * 1 -> aggiunge un Manager<br>
+     * 2 -> effettua il login<br>
+     * 3 -> stampa lista Manager<br>
+     * 4 -> chiude il programma<br>
+     * 0, 5-9 -> non ha comandi stabiliti<br>
      * @throws InputMismatchException se input non è numerico
-     * 1 -> aggiunge un Manager
-     * 2 -> effettua il login
-     * 3 -> stampa lista Manager
-     * 4 -> chiude il programma
-     * 0, 5-9 -> non ha comandi stabiliti
      */
     public void menu(){
         boolean loop = false;

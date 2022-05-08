@@ -9,7 +9,7 @@ package it.develhope.nicola.newex2;
 public record Manager(String name, String surname) {
 
     /**
-     * metodo per restituire la stringa manager
+     * metodo per restituire la stringa manager<br>
      * @return nome e cognome del manager come stringa
      */
     @Override

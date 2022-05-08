@@ -3,6 +3,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * main - tester
+ * @author nicolameloni
+ */
 public class Tester {
     public static void main(String[] args){
         List<Manager> managerList = new ArrayList<>();

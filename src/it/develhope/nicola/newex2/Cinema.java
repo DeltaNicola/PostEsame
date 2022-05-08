@@ -9,18 +9,20 @@ import java.util.Scanner;
 public class Cinema {
 
     /**
-     * attributi:
-     * seat[]: nota se il posto è libero od occupato
-     * user[]: assegna un nominativo al posto occupato
+     * seat[] nota se il posto è libero od occupato
      */
     private final boolean[] seat;
+
+    /**
+     * user[] assegna un nominativo al posto occupato
+     */
     private final Utente[] user;
     private final Scanner input;
 
     /**
-     * Costruttore per inizializzare gli attributi
-     * seat: ogni posto è libero
-     * user: ogni utente è vuoto
+     * Costruttore per inizializzare gli attributi<br>
+     * seat: ogni posto è libero<br>
+     * user: ogni utente è vuoto<br>
      */
     public Cinema(){
         seat = new boolean[10];
@@ -44,7 +46,7 @@ public class Cinema {
     }
 
     /**
-     * visualizza i posti diponibili
+     * visualizza i posti diponibili<br>
      * se seat[index] == falso -> non è disponibile
      */
     private void seeDisp(){
@@ -60,9 +62,9 @@ public class Cinema {
     }
 
     /**
-     * assegna un utente al posto in base al booleano di controllo
-     * l'utente ha nome e cognome se il posto deve essere occupato
-     * l'utente ha nome e cognomi vuoti se il posto deve essere liberato
+     * assegna un utente al posto in base al booleano di controllo<br>
+     * l'utente ha nome e cognome se il posto deve essere occupato<br>
+     * l'utente ha nome e cognomi vuoti se il posto deve essere liberato<br>
      * @param x booleano di controllo
      * @return utente completo o vuoto
      */
@@ -80,7 +82,7 @@ public class Cinema {
     }
 
     /**
-     * prenotazione del posto
+     * prenotazione del posto<br>
      * controllo della disponibilità dei posti
      */
     private void takePosto(){
@@ -99,7 +101,7 @@ public class Cinema {
     }
 
     /**
-     * cancellazione della prenotazione
+     * cancellazione della prenotazione<br>
      * controllo dell'esistenza di precedenti prenotazioni
      */
     private void delPosto(){
@@ -118,14 +120,14 @@ public class Cinema {
     }
 
     /**
-     * menù di interazione in base all'input
-     * controllo dell'input e chiamata della funzione prescelta
+     * menù di interazione in base all'input<br>
+     * controllo dell'input e chiamata della funzione prescelta<br>
+     * 1 -> vede la disponibilità dei posti<br>
+     * 2 -> prenota un posto<br>
+     * 3 -> cancella la prenotazione<br>
+     * 4 -> chiude il programma<br>
+     * 0, 5-9 -> non ha comandi stabiliti<br>
      * @throws InputMismatchException se input non è numerico
-     * 1 -> vede la disponibilità dei posti
-     * 2 -> prenota un posto
-     * 3 -> cancella la prenotazione
-     * 4 -> chiude il programma
-     * 0, 5-9 -> non ha comandi stabiliti
      */
     public void menu(){
         boolean loop = false;
