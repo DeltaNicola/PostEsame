@@ -9,8 +9,9 @@ import java.util.Scanner;
 public class Cinema {
 
     /**
-     seat[]: nota se il posto è libero od occupato
-     user[]: assegna un nominativo al posto occupato
+     * attributi:
+     * seat[]: nota se il posto è libero od occupato
+     * user[]: assegna un nominativo al posto occupato
      */
     private final boolean[] seat;
     private final Utente[] user;
