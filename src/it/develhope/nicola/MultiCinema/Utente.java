@@ -7,11 +7,12 @@ package it.develhope.nicola.MultiCinema;
 public class Utente {
 
     /**
-     * attributi:
-     * name: nome dell'utente
-     * surname: cognome dell'utente
+     * nome dell'Utente
      */
     private final String name;
+    /**
+     * cognome dell'Utente
+     */
     private final String surname;
 
     /**
