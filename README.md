@@ -16,6 +16,13 @@ Obiettivo: gestire il multisala, sapendo che ogni singola sala è associata ad u
 
 ***
 
+#### Documentazione
+Documentazione Javadoc dei progetti presenti
+* [CodaDoc](https://github.com/DeltaNicola/PostEsame/tree/master/CodaDoc)
+* [MultiCinemaDoc](https://github.com/DeltaNicola/PostEsame/tree/master/CodaDoc)
+
+***
+
 #### [archivio](https://github.com/DeltaNicola/PostEsame/tree/master/archivio)
 Archivio delle versioni rar
 * 5.7.22.1v -> creazione archivio
