@@ -16,7 +16,7 @@ Obiettivo: gestire il multisala, sapendo che ogni singola sala è associata ad u
 
 ***
 
-#### [archivio](https://github.com/DeltaNicola/PostEsame/archivio)
+#### [archivio](https://github.com/DeltaNicola/PostEsame/tree/master/archivio)
 Archivio delle versioni rar
 * 5.7.22.1v -> creazione archivio
 * 5.7.22.2v -> aggiornamento codice
